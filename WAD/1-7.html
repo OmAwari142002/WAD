@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Dashboard</title>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Custom CSS */
+body {
+  background-color: #f8f9fa;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.navbar-nav .nav-link {
+  color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #ffffff;
+}
+
+.card-header {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.list-group-item {
+  background-color: #ffffff;
+}
+
+.list-group-item:hover {
+  background-color: #f2f2f2;
+}
+
+.table thead th {
+  background-color: #343a40;
+  color: #ffffff;
+}
+
+.table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Admin Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Orders</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Customers</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Content -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- Charts -->
+      <div class="col-lg-8">
+        <div class="card">
+          <div class="card-header">Sales Overview</div>
+          <div class="card-body">
+            <canvas id="salesChart"></canvas>
+          </div>
+        </div>
+      </div>
+      <!-- Recent Orders -->
+      <div class="col-lg-4">
+        <div class="card">
+          <div class="card-header">Recent Orders</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Order #12345 - $250</li>
+            <li class="list-group-item">Order #12346 - $150</li>
+            <li class="list-group-item">Order #12347 - $300</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <!-- Product Inventory -->
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header">Product Inventory</div>
+          <div class="card-body">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Name</th>
+                  <th>Price</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Product A</td>
+                  <td>$50</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Product B</td>
+                  <td>$70</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Product C</td>
+                  <td>$90</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+      <!-- Revenue Summary -->
+      <div class="col-lg-6">
+        <div class="card">
+          <div class="card-header">Revenue Summary</div>
+          <div class="card-body">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Total Sales: $700</li>
+              <li class="list-group-item">Total Orders: 3</li>
+              <li class="list-group-item">Average Order Value: $233.33</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS and Chart.js -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="scripts.js"></script>
+</body>
+</html>
